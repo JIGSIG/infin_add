@@ -1,15 +1,15 @@
 ##
 ## EPITECH PROJECT, 2019
-## bistromatic
+## infin_add
 ## File description:
-## bistromatic makefile
+## infin_add makefile
 ##
 
 CC =		gcc
 
 RM =		rm -f
 
-NAME =		bistromatic
+NAME =		infin_add
 
 COMPILEFLAG =	-Wall -Wextra -pedantic -g
 
