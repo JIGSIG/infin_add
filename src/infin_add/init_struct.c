@@ -12,14 +12,18 @@ static char get_final_sign(char *A, char *B)
     int lenA = strlen(A);
     int lenB = strlen(B);
 
-    if ((*A == '-' && *B == '+') && lenA < lenB)
+    if ((*A == '-' && *B != '-') && lenA < lenB)
         return ('-');
-    if ((*A == '-' && *B == '+') && lenA > lenB)
+    if ((*A == '-' && *B != '-') && lenA > lenB)
         return ('-');
     if ((*A == '-' && *B == '-'))
         return ('-');
-    if ((*A == '+' && *B == '-') && lenA > lenB)
+    if ((*A != '-' && *B == '-') && lenA > lenB)
+        return ('-');
+    if ((*A != '-' && *B == '-') && lenA > lenB)
         return ('+');
+    if ((*A != '-' && *B == '-') && lenA < lenB)
+        return ('-');
     return ('+');
 }
 
